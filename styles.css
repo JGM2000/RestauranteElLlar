@@ -1,0 +1,72 @@
+
+*{box-sizing:border-box}
+:root{
+  --bg:#ffffff;
+  --ink:#111;
+  --muted:#666;
+  --accent:#6C2A2A;
+  --accent-ink:#fff;
+  --overlay:rgba(0,0,0,.6);
+}
+html,body{margin:0;padding:0}
+body{
+  font-family:Georgia,'Times New Roman',Times,serif;
+  color:var(--ink);
+  background:var(--bg) url('assets/fondo.jpg') center/cover fixed no-repeat;
+  line-height:1.6;
+}
+body.no-bg{background:none;background-color:#fff}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+a{color:inherit;text-decoration:none}
+.header{position:sticky;top:0;z-index:20;backdrop-filter:saturate(120%) blur(6px);background:rgba(255,255,255,.86);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:800;letter-spacing:.03em;padding:10px 0}
+.nav a{padding:10px 10px;color:#333;border-radius:8px}
+.nav a:hover{background:rgba(0,0,0,.04)}
+.nav .btn{background:var(--accent);color:var(--accent-ink)}
+.hero{padding:36px 0 36px}
+.hero .inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.hero .logo{width:min(960px,85vw);height:auto;display:block}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:16px 26px;border-radius:999px;font-weight:600;letter-spacing:.02em;font-size:1.15rem;margin-top:-6px}
+.btn:hover{transform:translateY(-1px)}
+
+/* Full-bleed long copy */
+.long-copy{
+  width:100vw;
+  margin:18px 0 0 50%;
+  transform:translateX(-50%);
+  text-align:justify; text-justify:inter-word;
+  color:#fff; font-size:1.2rem;
+  background:var(--overlay);
+  padding:34px min(9vw,72px);
+  border-radius:0;
+}
+
+/* badges */
+.features{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.feature-badge{
+  display:inline-block;color:#fff;border:1px solid rgba(255,255,255,.65);
+  padding:12px 18px;border-radius:999px;text-transform:uppercase;
+  letter-spacing:.06em;font-weight:700;background:rgba(0,0,0,.25)
+}
+
+.center{text-align:center}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);margin:24px 0}
+.footer{padding:28px 0;background:rgba(255,255,255,.85);border-top:1px solid rgba(0,0,0,.06)}
+.reservas{color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.5);font-size:1.3rem}
+
+/* Carta */
+.menu-section{margin:24px 0}
+.menu-title{font-size:22px;font-weight:800;margin-bottom:6px;border-bottom:1px solid rgba(0,0,0,.08);padding-bottom:6px}
+.menu-list{list-style:none;margin:0;padding:0}
+.menu-item{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed rgba(0,0,0,.08)}
+.menu-name{font-weight:400}
+.menu-price{font-variant-numeric:tabular-nums}
+.note{color:var(--muted);font-size:14px}
+
+@media(max-width:760px){
+  .wrap{padding:20px}
+  .menu-item{flex-direction:column;align-items:flex-start}
+  .menu-price{margin-top:4px}
+  .long-copy{padding:28px 18px}
+}
