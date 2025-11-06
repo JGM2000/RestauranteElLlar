@@ -12,7 +12,7 @@ html,body{margin:0;padding:0}
 body{
   font-family:Georgia,'Times New Roman',Times,serif;
   color:var(--ink);
-  background:var(--bg) url('assets/fondo.jpg') center/cover fixed no-repeat;
+  background:var(--bg) url('fondo.jpg') center/cover fixed no-repeat;
   line-height:1.6;
 }
 body.no-bg{background:none;background-color:#fff}
